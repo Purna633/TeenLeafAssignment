@@ -1,0 +1,11 @@
+package Task1.example.service;
+
+import Task1.example.model.User;
+
+import java.util.List;
+
+public interface UserService {
+    public User getUserProfile(String jwt);
+
+    public List<User> getAllUser();
+}

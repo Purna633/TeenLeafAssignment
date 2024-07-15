@@ -1,0 +1,170 @@
+{
+	"info": {
+		"_postman_id": "d9df3bdd-95c0-47ce-b279-af8080fa3a6b",
+		"name": "Task1",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "29990012"
+	},
+	"item": [
+		{
+			"name": "user",
+			"item": [
+				{
+					"name": "signup",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"purnaale@gmail.com\",\r\n    \"password\":\"12345\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8000/auth/signin"
+					},
+					"response": []
+				},
+				{
+					"name": "get user profile",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE3MjA4NjQxNDUsImV4cCI6MTcyMDk1MDU0NSwiZW1haWwiOiJhc2ltYWxlQGdtYWlsLmNvbSIsImF1dGhvcml0aWVzIjoiIn0.-p26bRGCb8LSqlARTE9AfXshqR-O8n07I_iq_7ujBuNQKftx8eWQ4tASD6K5l-88PkAYyZUQG5duWHZLYvdrsQ"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8000/api/users/profile"
+					},
+					"response": []
+				},
+				{
+					"name": "get all user",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE3MjA4NjM1MTksImV4cCI6MTcyMDk0OTkxOSwiZW1haWwiOiJwdXJuYWFsZUBnbWFpbC5jb20iLCJhdXRob3JpdGllcyI6IiJ9.g1PKsaFV_1X3CWaAypXtgQw42txa6RCdORMnBrs2Qg8F5xZXUtGtqHqF3v1zLuNLPqrV_gBWFTwLJ5H1cA5siA"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8000/api/users"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "post",
+			"item": [
+				{
+					"name": "create post",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE3MjA4NzU4ODMsImV4cCI6MTcyMDk2MjI4MywiZW1haWwiOiJwdXJuYWFsZUBnbWFpbC5jb20iLCJhdXRob3JpdGllcyI6IiJ9._r7L58hJYm0nR89O7HbACjekgY5FgN_JJ99uIixQ4e2QLnnBqHzAzE8z7GCaYWUxt2yr0KXN9z7CzWuuQxJ9kg"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\":\"noodles\",\r\n    \"image\":\"https://images.pexels.com/photos/1279330/pexels-photo-1279330.jpeg?auto=compress&cs=tinysrgb&w=600\",\r\n    \"description\":\"noodle is the one thing that I will never get tired of.\"\r\n\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8000/api/posts"
+					},
+					"response": []
+				},
+				{
+					"name": "update post",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8000/api/posts"
+					},
+					"response": []
+				},
+				{
+					"name": "delete post",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "get all post",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "get post comment",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "comment",
+			"item": [
+				{
+					"name": "create comment",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "get coment by postid",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "update comment",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "delete comment",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
